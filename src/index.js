@@ -9,8 +9,13 @@ import { BrowserRouter } from 'react-router-dom';
 import { BookContextProvider } from './Context/BookContext';
 import 'react-toastify/dist/ReactToastify.css';
 import { ChatBoxContextProvider } from './Context/ChatBoxContext';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // const root = document.getElementById("root");
@@ -19,6 +24,8 @@ import { ChatBoxContextProvider } from './Context/ChatBoxContext';
 ReactDOM.render(
 
   <MoralisProvider appId={process.env.REACT_APP_MORALIS_KEY} serverUrl={process.env.REACT_APP_MORALIS_SERVER}>
+    {/* <ThemeProvider theme={darkTheme}> */}
+
     <BookContextProvider>
       <BrowserRouter>
       <ChatBoxContextProvider>
@@ -30,6 +37,8 @@ ReactDOM.render(
 
       </BrowserRouter>
     </BookContextProvider>
+    {/* </ThemeProvider> */}
+
   </MoralisProvider>,
   document.getElementById('root')
 

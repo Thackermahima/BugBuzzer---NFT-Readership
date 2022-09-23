@@ -14,6 +14,9 @@ import "react-toastify/dist/ReactToastify.css";
 import * as EpnsAPI from "@epnsproject/sdk-restapi";
 import EpnsSDK from "@epnsproject/backend-sdk-staging";
 import { api, utils } from "@epnsproject/frontend-sdk-staging";
+import { Typography } from '@mui/material';
+import TextInput from "./base/TextInput";
+
 require("dotenv").config({ path: "./.env" });
 function UploadFormNft() {
   const { Moralis } = useMoralis();
@@ -232,13 +235,17 @@ function UploadFormNft() {
   })
   return (
     <div
-      style={{ backgroundColor: "#faf7f8", marginTop: "10%" }}
+      style={{ backgroundColor: "#171717", marginTop: "5%" }}
       className="col footer-top"
     >
       <div className="form-style-2 offset-4 row-8">
-        <div className="form-style-2-heading">Add NFT Readership from here</div>
+      <Typography className="form-style-2-heading" variant="h5" color="rgb(110, 191, 139)">Add NFT Readership from heree</Typography>
+
+        {/* <div className="form-style-2-heading" style={{ color = "rgb(110, 191, 139)"}}>Add NFT Readership from here</div> */}
         <form action="" method="" onSubmit={onFormSubmit}>
-          <label for="field1">
+        <TextInput width="290px" height="37px" placeholder="Enter Author name"  value={authorname} onChange={authorNameEvent}  type="text"/>
+
+          {/* <label for="field1">
             <span>
               Name <span className="required">*</span>
             </span>
@@ -250,9 +257,9 @@ function UploadFormNft() {
               class="input-field"
               name="field1"
             />
-          </label>{" "}
+          </label>{" "} */}
           <br />
-          <label for="field1">
+          {/* <label for="field1">
             <span>
               Symbol<span className="required">*</span>
             </span>
@@ -265,13 +272,15 @@ function UploadFormNft() {
               name="field1"
               symbol={symbol}
             />
-          </label>{" "}
+          </label>{" "} */}
+          <TextInput width="290px" height="37px" placeholder="Enter symbol"  value={symbol} onChange={symbolEvent}  type="text"/>
+
           <br />
           {/* <label for="field4"><span>Not NFT holder</span><select value={category} name="field4" onChange={(e)=>setNoNFT(e.target.value)} className="select-field">
                         <option defaultChecked defaultValue="free" value="free">Post story for free</option>
                         <option value="charge">Documents</option>
                     </select></label> */}
-          <label for="field1">
+          {/* <label for="field1">
             <span>
               tokenPrice <span className="required">*</span>
             </span>
@@ -283,9 +292,11 @@ function UploadFormNft() {
               class="input-field"
               name="field1"
             />
-          </label>{" "}
+          </label>{" "} */}
+          <TextInput width="290px" height="37px" placeholder="Enter a token price"  value={tokenPrice} onChange={tokenPriceEvent}  type="text"/>
+
           <br />
-          <label for="field1">
+          {/* <label for="field1">
             <span>
               tokenQuantity<span className="required">*</span>
             </span>
@@ -297,15 +308,18 @@ function UploadFormNft() {
               class="input-field"
               name="field1"
             />
-          </label>
+          </label> */}
+          <TextInput width="290px" height="37px" placeholder="Enter a token quantity"  value={tokenQuantity} onChange={tokenQuantityEvent}  type="text"/>
+
           <input
             type="submit"
             value={loading ? "Loading...." : "Submit"}
-            style={{ backgroundColor: "#D82148", marginLeft: "120px" }}
+            style={{  background: "#6EBF8B", color: '#151D3B',
+                        fontWeight: '30px', borderRadius: '7%', marginLeft: "13px", padding: "auto", marginTop:"5%" }}
             // onClick={notify}
             disabled={loading}
           />
-          < ToastContainer />
+          <ToastContainer />
         </form>
       </div>
     </div>

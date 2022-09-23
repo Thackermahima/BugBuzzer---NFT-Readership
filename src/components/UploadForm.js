@@ -14,7 +14,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import EpnsSDK from "@epnsproject/backend-sdk-staging"
 import * as EpnsAPI from "@epnsproject/sdk-restapi"
-import { ethers } from 'ethers'
+import { ethers } from 'ethers';
+import TextInput from "./base/TextInput";
+import Select from "./base/Select";
+import Button from "./base/Button"
+import { Typography } from '@mui/material';
+import '../styles/base/Select.css';
+
+
+
 function UploadForm() {
     const notify = () => toast("Story is Published!");
     const bookContext = React.useContext(BookContext);
@@ -168,14 +176,23 @@ function UploadForm() {
         setLoading(false)
     }
     return (
-        <div style={{ backgroundColor: "aliceblue", marginTop: "77px" }} className="col">
+        <div style={{ backgroundColor: "#171717", marginTop: "50px", color:'white'}} className="col">
             <div className="form-style-2 offset-4 row-8">
-                <div className="form-style-2-heading">Share Your Valuable Knowledge</div>
+                <Typography className="form-style-2-heading" variant="h5" color="rgb(110, 191, 139)">Share Your Valuable Knowledge</Typography>
+
                 <form action="" method="" onSubmit={onFormSubmit}>
-                    <label for="field1"><span>Author Name  <span className="required">*</span></span><input value={AuthorName} onChange={AuthornameEvent} placeholder="File name" type="text" class="input-field" name="field1" /></label>
+              <TextInput width="290px" height="37px" placeholder="Enter Author name"  value={AuthorName} onChange={AuthornameEvent}  type="text"/>
+                <TextInput width="290px" height="37px" placeholder="Title"  value={name} onChange={nameEvent}/>
+                <Select
+   items={["Smart Contract", "Security Vulnerabilities", "UI/UX","Crypto Scams","Hardware And IOT","Function Issues"]}
+   onChange={(e) => setCategory(e.target.value)}
+   value={category}
+  />
+                        <TextInput width="290px" height="37px" placeholder="Enter Author name"  value={undefined} onChange={coverEvent} type="file"/>
+                    {/* <label for="field1"><span>Author Name  <span className="required">*</span></span><input value={AuthorName} onChange={AuthornameEvent} placeholder="File name" type="text" class="input-field" name="field1" /></label>
                     <label for="field1"><span> Title <span className="required">*</span></span><input value={name} onChange={nameEvent} placeholder="File name" type="text" class="input-field" name="field1" /></label>
-                    <label for="field4"><span>Category <span className="required">*</span></span><select value={category} name="field4" onChange={(e) => setCategory(e.target.value)} className="select-field">
-                        <option>Choose Category </option>
+                    <label for="field4"><span>Category <span className="required">*</span></span><select value={category} name="field4" onChange={(e) => setCategory(e.target.value)} className="select-field"> */}
+                        {/* <option>Choose Category </option>
                         <option defaultChecked defaultValue="Fanfiction" value="Fanfiction">Smart Contract</option>
                         <option value="Fantasy">Security Vulnerabilities</option>
                         <option value="Horror">UI/UX</option>
@@ -183,12 +200,16 @@ function UploadForm() {
                         <option value="Romance">Hardware And IOT</option>
                         <option value="Historical">Function Issues</option>
                         
-                    </select></label>
-                    <div style={{ marginBottom: "50px" }}>
+                    </select></label> */}
+
+
+
+                    {/* <div style={{ marginBottom: "50px" }}>
                         <label for="field6"><span>Add Image <span className="required">*</span></span><input className="file-input" value={undefined} onChange={coverEvent} type="file"></input></label>
-                    </div>
-                    <label for="field5" style={{ display: "inline-flex" }}><span style={{}}>Description <span
-                        className="required">*</span></span>
+                    </div> */}
+                    <label for="field5" style={{ display: "inline-flex", marginTop:'2%'}}><span style={{ }}>Description</span>
+                        <div style={{  marginRight:'35%'}}>
+
                         <Editor
                             wrapperClassName="wrapper-class"
                             editorClassName="editor-class"
@@ -196,10 +217,13 @@ function UploadForm() {
                             placeholder="Write here...."
                             onChange={(value) => setDescription(value.blocks[0].text)}
                         />
+                                                </div>
+
                     </label>
                     {/* -------- */}
-                    <label for="field5" style={{ display: "inline-flex" }}><span style={{}}>Full Tutorial  <span
-                        className="required">*</span></span>
+                    <label for="field5" style={{ display: "inline-flex", marginTop:'5%'}}><span style={{}}>Full Tutorial</span>
+                        <div style={{  marginRight:'14%',  }}>
+
                         <Editor
                             wrapperClassName="wrapper-class"
                             editorClassName="editor-class"
@@ -207,12 +231,24 @@ function UploadForm() {
                             placeholder="Write full tutorial here...."
                             onChange={(value) => setContent(value.blocks[0].text)}
                         />
+                        </div>
                     </label>
-                    <label for="field4"><span>For non NFT Holder <span className="required">*</span></span><select value={NonNFTHolder} name="field4" onChange={(e) => setNonNFTHolder(e.target.value)} className="select-field">
-                        <option>Choose an option</option>
+                    {/* <label style={{ marginTop:'5%',marginRight:'10%'}} for="field4"><span>For non NFT Holder <span className="required">*</span></span> */}
+                    {/* <Select
+   items={[
+"Free", "Chargable"
+]}
+   onChange={(e) => setCategory(e.target.value)}
+   value={category}
+  /> */}
+  <div style={{ marginTop:'4%'}}>
+
+                    <select value={NonNFTHolder} name="field4" onChange={(e) => setNonNFTHolder(e.target.value)} className="select-field dropdown  ">
+                        <option>Choose an option for non NFT Holder</option>
                         <option value="Free">Free</option>
                         <option value="Chargeble">Chargeble</option>
                     </select>
+
                         {
                             NonNFTHolder == "Chargeble" ? (
                                 <input
@@ -226,9 +262,13 @@ function UploadForm() {
                                 />
                             ) : ""
                         }
-                    </label>
-                    <label for="field4"><span>For NFT Holder <span className="required">*</span></span> <select value={NFTHolder} name="field4" onChange={(e) => setNFTHolder(e.target.value)} className="select-field">
-                        <option>Choose an option</option>
+                    {/* </label> */}
+                    </div>
+                    {/* <label for="field4"><span>For NFT Holder <span className="required">*</span></span>  */}
+                    <div style={{ marginTop:'4%'}}>
+
+                    <select value={NFTHolder} name="field4" onChange={(e) => setNFTHolder(e.target.value)} className="select-field">
+                        <option>Choose an option for NFT holder</option>
                         <option value="Free">Free</option>
                         <option value="Discount">Discount price</option>
                     </select>
@@ -245,7 +285,8 @@ function UploadForm() {
                                 />
                             ) : ""
                         }
-                    </label>
+                    {/* </label> */}
+                    </div>
                     {
                         NonNFTHolder == "Chargeble" || NFTHolder == "Discount" ? (
                             <label for="field4"><span>Select Token <span className="required">*</span></span> <select name="field4"
@@ -260,14 +301,15 @@ function UploadForm() {
                             </label>
                         ) : "  "
                     }
-                    <label><input className="terms-checkbox" value={checkbox} onChange={checkboxEvent} type="checkbox"></input>I agree to terms and conditions.</label>
+                    <label style={{ fontSize:"21px", marginTop:"2%", marginRight:'8%'}}><input className="terms-checkbox" value={checkbox} onChange={checkboxEvent} type="checkbox" ></input>I agree to terms and conditions.</label>
                     <button className="btn" type="submit" style={{
                       background: "#6EBF8B", color: '#151D3B',
-                        fontWeight: '30px', borderRadius: '7%', marginLeft: "137px", padding: "auto"
+                        fontWeight: '30px', borderRadius: '7%', marginLeft: "13px", padding: "auto"
                     }} onClick={notify} disabled={loading}>
                         {loading ? "Loading...." : "Publish"}
                         <ToastContainer />
                     </button>
+                    
                 </form>
                 {/* <button value={notification} onClick={NotificationEvent}> noteeeeeee</button> */}
             </div>
