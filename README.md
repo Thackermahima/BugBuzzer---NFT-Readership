@@ -26,37 +26,9 @@ of the BugBuzzer community .
 # Profile 
 
 ***
-# IPFS & Filecoin 
-```function addData(Item) {
-        const blob = new Blob(
-            [
-                JSON.stringify(Item),
-            ],
-            { type: "application/json" }
-        );
-        const files = [
-            new File([blob], "story.json"),
-        ];
-        console.log('files==>', files);
-        return files;
 
-    }
-    async function storeFiles(Item) {
-
-        StoryPad.set('Currunt_user', user);
-        let files = addData(Item);
-        const cid = await client.put(files);
-        StoryPad.set("CID", cid);
-        StoryPad.save();
-
-        console.log("files with cid ==>",  https://dweb.link/ipfs/${cid}/story.json);
-
-        return cid;
-    }```
     
-    ***
-    
-    # Polygon
+   # Polygon
     
     ```function createToken(string memory name, string memory symbol) public {
         address _address = address(new mintContract(name, symbol)); // Created Token contract.
@@ -76,7 +48,8 @@ of the BugBuzzer community .
     }```
     
     ***    
-    # Covalent 
+    
+   # Covalent 
     ```useEffect(() => {
     axios.get(`https://api.covalenthq.com/v1/80001/tokens/${address}/nft_token_ids/?key=ckey_326b5347eff049c69bc901fc77a`)
       .then((response) => {
@@ -116,8 +89,8 @@ of the BugBuzzer community .
     }```
     
     ***    
-
-<h1>EPNS</h1>
+  
+   # EPNS
 ```const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
         const Pkey = `0x${PK}`;
         const epnsSdk = new EpnsSDK(Pkey)
@@ -126,8 +99,8 @@ of the BugBuzzer community .
           userAdd,
           "Hey there",
           "Welcome to the BugBuzzer",
-          `${authorname} Created NFT`,
-          ` Uploaded collection of ${symbol} NFTs successfully!`,
+          ${authorname} Created NFT,
+           Uploaded collection of ${symbol} NFTs successfully!,
           3, //this is the notificationType
           '', // a url for users to be redirected to
           '',// an image url, or an empty string
@@ -167,7 +140,7 @@ of the BugBuzzer community .
     
     ***    
 
-# Login with Unstoppable.
+     # Login with Unstoppable.
 ```async function inlog() {
 
     try {
@@ -192,7 +165,7 @@ of the BugBuzzer community .
   
       ***    
 
- # WorldCoin
+      # WorldCoin
  ``` <WorldIDWidget
                 actionId="wid_staging_76474f51ceeaf9c0730fae2c659f637b" // obtain this  
                 signal="user-id-1"
@@ -206,5 +179,32 @@ of the BugBuzzer community .
                 onInitSuccess={() => console.log("Init successful")}
                 onInitError={(error) => console.log("Error while initialization World ID", error)} />```
                 
-                ***    
+                ***  
+     # IPFS & Filecoin 
+```function addData(Item) {
+        const blob = new Blob(
+            [
+                JSON.stringify(Item),
+            ],
+            { type: "application/json" }
+        );
+        const files = [
+            new File([blob], "story.json"),
+        ];
+        console.log('files==>', files);
+        return files;
+
+    }
+    async function storeFiles(Item) {
+
+        StoryPad.set('Currunt_user', user);
+        let files = addData(Item);
+        const cid = await client.put(files);
+        StoryPad.set("CID", cid);
+        StoryPad.save();
+
+        console.log("files with cid ==>",  https://dweb.link/ipfs/${cid}/story.json);
+
+        return cid;
+    }```
     
