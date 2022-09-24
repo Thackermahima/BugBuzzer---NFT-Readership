@@ -4,28 +4,29 @@
 
 ![Bug Buzzer Banner 640 - 360](https://user-images.githubusercontent.com/81761152/192082962-627821ac-2b86-4c1c-ac64-9857f70de9f3.png)
 
-#Q & A platform.
+# Q & A platform.
 ***
 Developers can ask challenging problems and earn crypto rewards.
 
 ***
-#NFT Membership for developers.
+# NFT Membership for developers.
 Here anyone can create their own NFT membership club. 
+
 ***
 
-#Live tech support with expert developers.
+# Live tech support with expert developers.
 Tech support with expert developers.
 
 ***
-#Connect with BugBuzzer and developers
+# Connect with BugBuzzer and developers
 People can connect , collaborate and hire expert developers
 of the BugBuzzer community .
 
 ***
-#Profile 
+# Profile 
 
 ***
-#IPFS & Filecoin 
+# IPFS & Filecoin 
 ```
  function addData(Item) {
         const blob = new Blob(
@@ -55,11 +56,12 @@ of the BugBuzzer community .
 
         return cid;
     } ```
-    ***
-    #Polygon
     
-    ```
-    function createToken(string memory name, string memory symbol) public {
+    ***
+    
+    # Polygon
+    
+    ```function createToken(string memory name, string memory symbol) public {
         address _address = address(new mintContract(name, symbol)); // Created Token contract.
          tokenNames[_address] = name;
         emit TokenCreated(msg.sender, _address);
@@ -75,10 +77,10 @@ of the BugBuzzer community .
             mintContract(tokenAddress).safeMint(mintor , price, tokenNames[tokenAddress]);
         }
     }```
+    
     ***    
-    #Covalent 
-    ```
-     useEffect(() => {
+    # Covalent 
+    ```useEffect(() => {
     axios.get(`https://api.covalenthq.com/v1/80001/tokens/${address}/nft_token_ids/?key=ckey_326b5347eff049c69bc901fc77a`)
       .then((response) => {
         let Items = response.data.data.items;
@@ -93,11 +95,11 @@ of the BugBuzzer community .
         setAllTokenIds(Items)
       })
   }, []) ```
+  
       ***    
 
-  #Livepeer
-  ```
-  import { Client, isSupported } from '@livepeer/webrtmp-sdk';
+  # Livepeer
+  ```import { Client, isSupported } from '@livepeer/webrtmp-sdk';
    const client = new Client()
 
         const session = client.cast(stream.current, streamKey)
@@ -114,13 +116,12 @@ of the BugBuzzer community .
         session.on('error', (err) => {
             console.log('Stream error.', err.message)
         })
-    }
-```
+    }```
+    
     ***    
 
-#EPNS
-```
-const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
+<h1>EPNS</h1>
+```const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
         const Pkey = `0x${PK}`;
         const epnsSdk = new EpnsSDK(Pkey)
         console.log(epnsSdk, "epnsSDK");
@@ -137,9 +138,8 @@ const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
         ); ```
             ***    
 
-        #XMTP
-        ```
-         useEffect(() => {
+        # XMTP
+        ```useEffect(() => {
         const getConvo = async () => {
             if (!xmtp) {
                 return
@@ -166,11 +166,11 @@ const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
         if (xmtp) {
             getList()
         }
-    }, [conversation, peerAddress])
-```
+    }, [conversation, peerAddress])```
+    
     ***    
 
-#Login with Unstoppable.
+# Login with Unstoppable.
 ```async function inlog() {
 
     try {
@@ -195,9 +195,8 @@ const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
   
       ***    
 
- #WorldCoin
- ```
- <WorldIDWidget
+ # WorldCoin
+ ``` <WorldIDWidget
                 actionId="wid_staging_76474f51ceeaf9c0730fae2c659f637b" // obtain this  
                 signal="user-id-1"
                 enableTelemetry='false'
@@ -208,7 +207,7 @@ const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
                 onSuccess={(result) => console.log(result)}
                 onError={({ code, detail }) => console.log({ code, detail })}
                 onInitSuccess={() => console.log("Init successful")}
-                onInitError={(error) => console.log("Error while initialization World ID", error)} />
-                ```
+                onInitError={(error) => console.log("Error while initialization World ID", error)} />```
+                
                 ***    
     
