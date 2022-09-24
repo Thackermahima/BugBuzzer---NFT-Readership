@@ -48,7 +48,6 @@ of the BugBuzzer community .
         }
     }
     ```    
-    ***     
    # Covalent 
     ```
     useEffect(() => {
@@ -68,7 +67,6 @@ of the BugBuzzer community .
   }, [])```
  
 
-   ***    
   # Livepeer
   ```
    import { Client, isSupported } from '@livepeer/webrtmp-sdk';
@@ -91,7 +89,6 @@ of the BugBuzzer community .
     }
   ```
    
-    ***    
   
    # EPNS
    
@@ -110,7 +107,7 @@ of the BugBuzzer community .
           '',// an image url, or an empty string
           null, //this can be left as null
         ); ```
-         ***    
+             
   # XMTP
         ``` useEffect(() => {
         const getConvo = async () => {
@@ -140,7 +137,7 @@ of the BugBuzzer community .
             getList()
         }
     }, [conversation, peerAddress]) ```    
-    ***    
+        
    # Login with Unstoppable.
 ``` async function inlog() {
 
@@ -164,7 +161,7 @@ of the BugBuzzer community .
     console.log('Logged out with Unstoppable');
   }
   ```
-   ***    
+       
    # WorldCoin
     ``` <WorldIDWidget
                 actionId="wid_staging_76474f51ceeaf9c0730fae2c659f637b" // obtain this  
@@ -177,7 +174,7 @@ of the BugBuzzer community .
                 onSuccess={(result) => console.log(result)}
                 onError={({ code, detail }) => console.log({ code, detail })}
                 onInitSuccess={() => console.log("Init successful")}
-                onInitError={(error) => console.log("Error while initialization World ID", error)} />  ``` ***
+                onInitError={(error) => console.log("Error while initialization World ID", error)} />  ``` 
     
    
    # IPFS & Filecoin 
