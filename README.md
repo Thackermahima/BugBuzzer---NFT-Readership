@@ -41,8 +41,6 @@ of the BugBuzzer community .
         return files;
 
     }
-
-
     async function storeFiles(Item) {
 
         StoryPad.set('Currunt_user', user);
@@ -51,7 +49,7 @@ of the BugBuzzer community .
         StoryPad.set("CID", cid);
         StoryPad.save();
 
-        console.log("files with cid ==>", ` https://dweb.link/ipfs/${cid}/story.json`);
+        console.log("files with cid ==>",  https://dweb.link/ipfs/${cid}/story.json);
 
         return cid;
     }```
