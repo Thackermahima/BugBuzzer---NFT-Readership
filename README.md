@@ -52,12 +52,12 @@ of the BugBuzzer community .
    # Covalent 
     ```
     useEffect(() => {
-    axios.get(`https://api.covalenthq.com/v1/80001/tokens/${address}/nft_token_ids/?key=ckey_326b5347eff049c69bc901fc77a`)
+    axios.get(https://api.covalenthq.com/v1/80001/tokens/${address}/nft_token_ids/?key=ckey_326b5347eff049c69bc901fc77a`)
       .then((response) => {
         let Items = response.data.data.items;
         console.log('Items---', Items);
         Items.map((itemm) => {
-          axios.get(`https://api.covalenthq.com/v1/80001/tokens/${address}/nft_metadata/${itemm.token_id}/?key=ckey_326b5347eff049c69bc901fc77a`).then((response) => {
+          axios.get(https://api.covalenthq.com/v1/80001/tokens/${address}/nft_metadata/${itemm.token_id}/?key=ckey_326b5347eff049c69bc901fc77a).then((response) => {
             // console.log('response-==-==',response);
             let Metadata = response.data.data.items;
             console.log('Metadata---', Metadata);
@@ -65,8 +65,9 @@ of the BugBuzzer community .
         })
         setAllTokenIds(Items)
       })
-  }, [])
-  ```
+  }, [])```
+ 
+
    ***    
   # Livepeer
   ```
@@ -88,14 +89,14 @@ of the BugBuzzer community .
             console.log('Stream error.', err.message)
         })
     }
-    ```
+  ```
    
     ***    
   
    # EPNS
-```
+       ```
 const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
-        const Pkey = `0x${PK}`;
+        const Pkey = 0x${PK};
         const epnsSdk = new EpnsSDK(Pkey)
         console.log(epnsSdk, "epnsSDK");
         const txEPNS = await epnsSdk.sendNotification(
@@ -108,10 +109,10 @@ const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
           '', // a url for users to be redirected to
           '',// an image url, or an empty string
           null, //this can be left as null
-        ); 
-         ```
+        );
+        ```
          ***    
-    # XMTP
+  # XMTP
         ```
         useEffect(() => {
         const getConvo = async () => {
@@ -143,7 +144,7 @@ const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
     }, [conversation, peerAddress])
     ```    
     ***    
-      # Login with Unstoppable.
+   # Login with Unstoppable.
 ```
 async function inlog() {
 
@@ -168,8 +169,8 @@ async function inlog() {
   }
   ```
    ***    
-    # WorldCoin
- ```
+   # WorldCoin
+    ```
  <WorldIDWidget
                 actionId="wid_staging_76474f51ceeaf9c0730fae2c659f637b" // obtain this  
                 signal="user-id-1"
@@ -182,10 +183,11 @@ async function inlog() {
                 onError={({ code, detail }) => console.log({ code, detail })}
                 onInitSuccess={() => console.log("Init successful")}
                 onInitError={(error) => console.log("Error while initialization World ID", error)} />
-    ```
-    ***  
-      # IPFS & Filecoin 
-```
+                ```
+    
+   ***
+    # IPFS & Filecoin 
+     ```
     function addData(Item) {
         const blob = new Blob(
             [
