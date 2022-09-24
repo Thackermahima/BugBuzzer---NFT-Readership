@@ -94,8 +94,8 @@ of the BugBuzzer community .
     ***    
   
    # EPNS
-       ```
-const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
+   
+       ```const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
         const Pkey = 0x${PK};
         const epnsSdk = new EpnsSDK(Pkey)
         console.log(epnsSdk, "epnsSDK");
@@ -109,12 +109,10 @@ const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
           '', // a url for users to be redirected to
           '',// an image url, or an empty string
           null, //this can be left as null
-        );
-        ```
+        ); ```
          ***    
   # XMTP
-        ```
-        useEffect(() => {
+        ``` useEffect(() => {
         const getConvo = async () => {
             if (!xmtp) {
                 return
@@ -141,12 +139,10 @@ const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
         if (xmtp) {
             getList()
         }
-    }, [conversation, peerAddress])
-    ```    
+    }, [conversation, peerAddress]) ```    
     ***    
    # Login with Unstoppable.
-```
-async function inlog() {
+``` async function inlog() {
 
     try {
       const authorization = await unClient.loginWithPopup();
@@ -170,8 +166,7 @@ async function inlog() {
   ```
    ***    
    # WorldCoin
-    ```
- <WorldIDWidget
+    ``` <WorldIDWidget
                 actionId="wid_staging_76474f51ceeaf9c0730fae2c659f637b" // obtain this  
                 signal="user-id-1"
                 enableTelemetry='false'
@@ -182,13 +177,11 @@ async function inlog() {
                 onSuccess={(result) => console.log(result)}
                 onError={({ code, detail }) => console.log({ code, detail })}
                 onInitSuccess={() => console.log("Init successful")}
-                onInitError={(error) => console.log("Error while initialization World ID", error)} />
-                ```
+                onInitError={(error) => console.log("Error while initialization World ID", error)} />  ``` ***
     
-   ***
-    # IPFS & Filecoin 
-     ```
-    function addData(Item) {
+   
+   # IPFS & Filecoin 
+     ``` function addData(Item) {
         const blob = new Blob(
             [
                 JSON.stringify(Item),
@@ -213,6 +206,5 @@ async function inlog() {
         console.log("files with cid ==>",  https://dweb.link/ipfs/${cid}/story.json);
 
         return cid;
-    }
-    ```
+    } ```
     
