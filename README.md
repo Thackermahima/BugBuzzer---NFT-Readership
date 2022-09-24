@@ -49,8 +49,7 @@ of the BugBuzzer community .
     }
     ```    
    # Covalent 
-    ```
-    useEffect(() => {
+    ``` useEffect(() => {
     axios.get(https://api.covalenthq.com/v1/80001/tokens/${address}/nft_token_ids/?key=ckey_326b5347eff049c69bc901fc77a`)
       .then((response) => {
         let Items = response.data.data.items;
@@ -64,12 +63,11 @@ of the BugBuzzer community .
         })
         setAllTokenIds(Items)
       })
-  }, [])```
+  },[]) ```
  
 
   # Livepeer
-  ```
-   import { Client, isSupported } from '@livepeer/webrtmp-sdk';
+  ``` import { Client, isSupported } from '@livepeer/webrtmp-sdk';
    const client = new Client()
 
         const session = client.cast(stream.current, streamKey)
@@ -92,7 +90,7 @@ of the BugBuzzer community .
   
    # EPNS
    
-       ```const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
+       ``` const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
         const Pkey = 0x${PK};
         const epnsSdk = new EpnsSDK(Pkey)
         console.log(epnsSdk, "epnsSDK");
@@ -106,7 +104,8 @@ of the BugBuzzer community .
           '', // a url for users to be redirected to
           '',// an image url, or an empty string
           null, //this can be left as null
-        ); ```
+        ); 
+        ```
              
   # XMTP
         ``` useEffect(() => {
@@ -136,7 +135,8 @@ of the BugBuzzer community .
         if (xmtp) {
             getList()
         }
-    }, [conversation, peerAddress]) ```    
+    }, [conversation, peerAddress]) 
+    ```    
         
    # Login with Unstoppable.
 ``` async function inlog() {
@@ -174,7 +174,8 @@ of the BugBuzzer community .
                 onSuccess={(result) => console.log(result)}
                 onError={({ code, detail }) => console.log({ code, detail })}
                 onInitSuccess={() => console.log("Init successful")}
-                onInitError={(error) => console.log("Error while initialization World ID", error)} />  ``` 
+                onInitError={(error) => console.log("Error while initialization World ID", error)} />  
+                ``` 
     
    
    # IPFS & Filecoin 
@@ -203,5 +204,6 @@ of the BugBuzzer community .
         console.log("files with cid ==>",  https://dweb.link/ipfs/${cid}/story.json);
 
         return cid;
-    } ```
+    } 
+    ```
     
