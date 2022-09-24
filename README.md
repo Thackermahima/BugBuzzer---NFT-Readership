@@ -30,7 +30,8 @@ of the BugBuzzer community .
     
    # Polygon
     
-    ```function createToken(string memory name, string memory symbol) public {
+    ```
+    function createToken(string memory name, string memory symbol) public {
         address _address = address(new mintContract(name, symbol)); // Created Token contract.
          tokenNames[_address] = name;
         emit TokenCreated(msg.sender, _address);
@@ -45,12 +46,12 @@ of the BugBuzzer community .
         for (uint256 i = start; i < end; i++) {
             mintContract(tokenAddress).safeMint(mintor , price, tokenNames[tokenAddress]);
         }
-    }```
-    
-    ***    
-    
+    }
+    ```    
+    ***     
    # Covalent 
-    ```useEffect(() => {
+    ```
+    useEffect(() => {
     axios.get(`https://api.covalenthq.com/v1/80001/tokens/${address}/nft_token_ids/?key=ckey_326b5347eff049c69bc901fc77a`)
       .then((response) => {
         let Items = response.data.data.items;
@@ -64,12 +65,12 @@ of the BugBuzzer community .
         })
         setAllTokenIds(Items)
       })
-  }, [])```
-  
-      ***    
-
+  }, [])
+  ```
+   ***    
   # Livepeer
-  ```import { Client, isSupported } from '@livepeer/webrtmp-sdk';
+  ```
+   import { Client, isSupported } from '@livepeer/webrtmp-sdk';
    const client = new Client()
 
         const session = client.cast(stream.current, streamKey)
@@ -86,12 +87,14 @@ of the BugBuzzer community .
         session.on('error', (err) => {
             console.log('Stream error.', err.message)
         })
-    }```
-    
+    }
+    ```
+   
     ***    
   
    # EPNS
-```const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
+```
+const PK = process.env.REACT_APP_EPNS_PRIVATE_KEY;
         const Pkey = `0x${PK}`;
         const epnsSdk = new EpnsSDK(Pkey)
         console.log(epnsSdk, "epnsSDK");
@@ -105,11 +108,12 @@ of the BugBuzzer community .
           '', // a url for users to be redirected to
           '',// an image url, or an empty string
           null, //this can be left as null
-        ); ```
-            ***    
-
-        # XMTP
-        ```useEffect(() => {
+        ); 
+         ```
+         ***    
+    # XMTP
+        ```
+        useEffect(() => {
         const getConvo = async () => {
             if (!xmtp) {
                 return
@@ -136,12 +140,12 @@ of the BugBuzzer community .
         if (xmtp) {
             getList()
         }
-    }, [conversation, peerAddress])```
-    
+    }, [conversation, peerAddress])
+    ```    
     ***    
-
-     # Login with Unstoppable.
-```async function inlog() {
+      # Login with Unstoppable.
+```
+async function inlog() {
 
     try {
       const authorization = await unClient.loginWithPopup();
@@ -161,12 +165,12 @@ of the BugBuzzer community .
   async function out() {
     await unClient.logout();
     console.log('Logged out with Unstoppable');
-  }```
-  
-      ***    
-
-      # WorldCoin
- ``` <WorldIDWidget
+  }
+  ```
+   ***    
+    # WorldCoin
+ ```
+ <WorldIDWidget
                 actionId="wid_staging_76474f51ceeaf9c0730fae2c659f637b" // obtain this  
                 signal="user-id-1"
                 enableTelemetry='false'
@@ -177,11 +181,12 @@ of the BugBuzzer community .
                 onSuccess={(result) => console.log(result)}
                 onError={({ code, detail }) => console.log({ code, detail })}
                 onInitSuccess={() => console.log("Init successful")}
-                onInitError={(error) => console.log("Error while initialization World ID", error)} />```
-                
-                ***  
-     # IPFS & Filecoin 
-```function addData(Item) {
+                onInitError={(error) => console.log("Error while initialization World ID", error)} />
+    ```
+    ***  
+      # IPFS & Filecoin 
+```
+    function addData(Item) {
         const blob = new Blob(
             [
                 JSON.stringify(Item),
@@ -206,5 +211,6 @@ of the BugBuzzer community .
         console.log("files with cid ==>",  https://dweb.link/ipfs/${cid}/story.json);
 
         return cid;
-    }```
+    }
+    ```
     
