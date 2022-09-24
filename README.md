@@ -1,4 +1,4 @@
-#BugBuzzer
+# BugBuzzer
 
 **Token gated tech forum and bug bounty platform for builders where we have provided Q & A forum with crypto rewards, nft readership, live support with expert developers, and can connect with bug buzzer and developers.**
 
