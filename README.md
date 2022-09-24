@@ -62,8 +62,7 @@ of the BugBuzzer community .
           })
         })
         setAllTokenIds(Items)
-      })
-  },[]) ```
+      }) },[]) ```
  
 
   # Livepeer
