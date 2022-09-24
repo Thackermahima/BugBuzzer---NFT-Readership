@@ -27,8 +27,7 @@ of the BugBuzzer community .
 
 ***
 # IPFS & Filecoin 
-```
- function addData(Item) {
+```function addData(Item) {
         const blob = new Blob(
             [
                 JSON.stringify(Item),
@@ -55,7 +54,7 @@ of the BugBuzzer community .
         console.log("files with cid ==>", ` https://dweb.link/ipfs/${cid}/story.json`);
 
         return cid;
-    } ```
+    }```
     
     ***
     
@@ -94,7 +93,7 @@ of the BugBuzzer community .
         })
         setAllTokenIds(Items)
       })
-  }, []) ```
+  }, [])```
   
       ***    
 
